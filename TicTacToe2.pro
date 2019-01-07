@@ -28,18 +28,24 @@ SOURCES += \
         main.cpp \
         menu.cpp \
     options.cpp \
-    game.cpp
+    game.cpp \
+    winnerscreen.cpp \
+    winner.cpp
 
 HEADERS += \
         menu.h \
     options.h \
     game.h \
-    globals.h
+    globals.h \
+    winnerscreen.h \
+    winner.h
 
 FORMS += \
         menu.ui \
     options.ui \
-    game.ui
+    game.ui \
+    winnerscreen.ui \
+    winner.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

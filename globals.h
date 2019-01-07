@@ -4,7 +4,7 @@
     class Values
     {
     public:
-       static int height,width;
+       static int height,width,size,currentPlayer,lastX,lastY;
     };
 
 

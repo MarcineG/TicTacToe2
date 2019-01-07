@@ -15,6 +15,8 @@ Options::Options(QWidget *parent) :
 
     ui->heightValueLine->setText(QString::number(Values::height));
     ui->widthValueLine->setText((QString::number(Values::width)));
+    if(Values::currentPlayer==1)ui->xRadioButton->setChecked(1);
+    else ui->oRadioButton->setChecked(1);
 }
 
 Options::~Options()
@@ -33,6 +35,10 @@ void Options::on_saveButton_clicked()
     QString widthValue = ui->widthValueLine->text();
     Values::height=heightValue.toInt();
     Values::width=widthValue.toInt();
+    Values::size = Values::height*Values::width;
+    if(ui->oRadioButton->isChecked()) Values::currentPlayer = -1;
+    else Values::currentPlayer = 1;
     this->close();
 
 }
+
