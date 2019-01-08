@@ -6,17 +6,19 @@ Winner::Winner(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Winner)
 {
-    this->setWindowTitle("VICTORY!");
-    ui->setupUi(this);
 
+    ui->setupUi(this);
+    this->setWindowTitle("VICTORY!");
     ui->winText->setFontPointSize(14);
     if(Values::currentPlayer==1)
     {
         ui->winText->setPlainText("THE WINNER IS X");
+        ui->winText->setAlignment(Qt::AlignCenter);
     }
     else
     {
         ui->winText->setPlainText("THE WINNER IS O");
+        ui->winText->setAlignment(Qt::AlignCenter);
     }
 
 

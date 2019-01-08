@@ -20,7 +20,7 @@ private slots:
 
     void on_saveButton_clicked();
 
-    void on_xRadioButton_clicked();
+  //  void on_xRadioButton_clicked();
 
 private:
     Ui::Options *ui;
